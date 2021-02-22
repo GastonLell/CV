@@ -80,12 +80,18 @@ body{
     justify-content: space-around;
     text-align: center;
 }
+
 #nav-lateral a{
     padding: 16px 20px;
-    font-size: 2.5em;
+    font-size: 20px;
     font-weight: normal;
     color: var(--color-uno);
 }
+
+#nav-lateral ul li a i{
+    font-size: 35px;
+}
+
 #nav-lateral li:hover a{
     color: var(--color-fondo);
     background-color: var(--color-uno);
@@ -98,7 +104,7 @@ body{
     width: 45%;
     height: 500px;
     bottom: 50px;
-    background-image: url(../imagenes/fotoCV.png);
+    background-image: url(../assets/img/fotoCV.png);
     text-align: center;
     padding: 5px;
     background-position: center center;
@@ -106,7 +112,6 @@ body{
     background-size: cover;
     position: relative;
     border-radius: 30px;
-
 }
 #foto-nombre::before{
     content: "";
@@ -117,7 +122,6 @@ body{
     left: 0;
     right: 0;
     border-radius: 30px;
-
 }
 
 #foto-nombre h1{
@@ -155,15 +159,16 @@ body{
 #comunicacion{
     display: flex;
     flex-direction: row-reverse;
-    
 }
-#comunicacion a{
+
+#comunicacion a i{
+    font-size: 50px;
     display: block;
-    font-size: 60px;
     color: #ffffff;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 50px;
+    padding: 20px;
 }
+
 #cont-info{
     width: 90%;
     padding: 20px;
@@ -174,28 +179,51 @@ body{
 #educacion h4{
     color: var(--color-letra);
     font-size: 1.4em;
-    margin-bottom: -3px;
+    margin-bottom: 3px;
 }
 #educacion h3{
-    margin-bottom: -1px;
+    margin-bottom: 3px;
 }
 #educacion .curso{
-    padding: 6px;
+    padding: 8px;
     border-bottom: 1px solid rgb(80, 76, 76);
 }
 
 /* SKILLS */
 
-#skills div{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-#skills div h3{
-    font-size: 5.4em;
-    color: #ffffff;
+#skills div ul li{
+    margin-top: 10px;
+    font-family: sans-serif ;
+    font-size: 20px;
+    color: #fff;
     padding: 5px 40px;
 }
+/* TRABAJOS */
+
+.tarjeta-trabajos{
+    display: flex;
+    border: 1px solid var(--color-letra-dos);
+    margin-top: 30px;
+    padding: 5px;
+}
+.tarjeta-trabajos img{
+    width: 130px;
+    height: 85px;
+    margin: 10px;
+    opacity: 0.5;
+}
+.tarjeta-trabajos .info h2{
+    color: var(--color-letra);
+    text-align: left;
+}
+.tarjeta-trabajos .info p{
+    margin: 5px 0;
+}
+
+.tarjeta-trabajos .info a{
+    color: var(--color-letra);
+}
+
 
 /* CONTACTAME */
 
@@ -212,7 +240,7 @@ body{
 }
 #contactame textarea{
     resize: none;
-    height: 120px;
+    height: 90px;
 }
 #contactame textarea:focus{
     border-bottom: 2px solid var(--color-uno);
@@ -265,13 +293,6 @@ body{
     }
 }
 @media (max-width: 795px){
-    #skills img{
-        width: 120px;
-        height: 120px;
-    }
-    #skills div h3, img{
-        margin: 5px;
-    }
     #nav-lateral{
         width: 13%;
     }
@@ -280,17 +301,7 @@ body{
         text-align: center;
     }
 }
-@media (max-width: 635px){
-    #skills div h3{
-        font-size: 3em;
-        padding: 5px 20px;
-    }
-    #skills img{
-        width: 60px;
-        height: 60px;
-        margin-top: 15px;
-    }
-}
+
 @media (max-width: 550px){
     .subti{
         width: 100%;
@@ -326,15 +337,7 @@ body{
     #educacion h4{
         font-size: 1em;
     }
-    #skills div h3{
-        font-size: 2.5em;
-        padding: 5px 20px;
-    }
-    #skills img{
-        width: 50px;
-        height: 50px;
-        margin-top: 15px;
-    }
+
     #contactame form input[type="submit"]{
         width: 25%;
         height: 35px;
